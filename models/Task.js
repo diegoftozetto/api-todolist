@@ -2,7 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
-    name:{
+    marked: {
+        type: Boolean,
+        default: false
+    },
+    text: {
         type: String,
         require: true
     }
