@@ -50,9 +50,9 @@ router.put('/:id', (req, res) => {
 //Remover Tarefa
 router.delete('/:id', (req, res) => {
     Task.deleteOne({_id: req.params.id}).then(() => {
-        res.status(200).json({error: "Tarefa removida com sucesso."});
+        res.status(200).json({"message": "Tarefa removida com sucesso."});
     }).catch(() => {
-        res.status(500).json({error: "Falha ao processar requisição. Erro ao remover tarefa no Database."});
+        res.status(500).json({"message": "Falha ao processar requisição. Erro ao remover tarefa no Database."});
     }); 
 });
 
