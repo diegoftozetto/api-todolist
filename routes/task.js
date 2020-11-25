@@ -37,7 +37,7 @@ router.put('/:id', (req, res) => {
         task.marked = req.body.marked
 
         task.save().then(() => {
-            res.status(201).json(task);
+            res.status(200).json(task);
         }).catch((error) => {
             res.status(500).json({"message": "Falha ao processar requisição. Erro ao atualizar tarefa no Database."});
         });
