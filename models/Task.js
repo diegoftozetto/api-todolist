@@ -10,6 +10,6 @@ const TaskSchema = new Schema({
         type: String,
         require: true
     }
-});
+}, {timestamps: true});
 
 mongoose.model("tasks", TaskSchema);
