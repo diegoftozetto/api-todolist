@@ -22,7 +22,7 @@ const db = require("./config/db");
 ////////////////////////////////////////////////////////////
 //Mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect(db.mongoURI).then(() => {
+mongoose.connect(db.mongoURI, db.options).then(() => {
     console.log("Conectado ao mongoDB...");
 }).catch((error) => {
     console.log("Erro ao conectar com o mongoDB: " + error);
